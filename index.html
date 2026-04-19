@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>【無料】LINEで特典を受け取る</title>
+
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('D7IEFLJC77U3JKUGBB90');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        
+        :root {
+            /* 蒼天をイメージしたブルー基調 */
+            --primary: #005bac;
+            --primary-light: #e6f0f9;
+            --accent: #ff9800;
+            --bg: #f5f7fa;
+            --text: #2c3e50;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            background: var(--bg); 
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px 16px 60px;
+        }
+
+        /* メインカード */
+        .main-card {
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,91,172,0.1);
+            text-align: center;
+            border: 1px solid rgba(0,91,172,0.05);
+        }
+
+        .card-content { padding: 32px 20px; }
+
+        .top-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        h1 span { color: var(--accent); }
+
+        .lead-text {
+            font-size: 14px;
+            color: #5a6c7d;
+            margin-bottom: 24px;
+        }
+
+        /* 特典セクション */
+        .benefit-box {
+            background: var(--primary-light);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .benefit-item:last-child { margin-bottom: 0; }
+
+        .icon-wrap {
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-item p {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* 残り人数 */
+        .limit-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            color: #d32f2f;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #d32f2f;
+            border-radius: 50%;
+            animation: pulse-anim 1.5s infinite;
+        }
+
+        @keyframes pulse-anim {
+            0% { transform: scale(0.95); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+            100% { transform: scale(0.95); opacity: 1; }
+        }
+
+        /* ボタン */
+        .cta-button {
+            display: block;
+            background: #06C755; /* LINEカラー */
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 900;
+            box-shadow: 0 6px 20px rgba(6,199,85,0.3);
+            transition: 0.2s;
+            position: relative;
+        }
+
+        .cta-button:active { transform: translateY(2px); box-shadow: none; }
+
+        .sub-hint {
+            font-size: 12px;
+            color: #8899a6;
+            margin-top: 12px;
+        }
+
+        /* 特商法エリア */
+        .info-area {
+            margin-top: 30px;
+        }
+
+        details {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 16px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #555;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::after { content: '＋'; color: var(--primary); }
+        details[open] summary::after { content: '－'; }
+
+        .details-inner {
+            padding: 0 16px 16px;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        .details-inner p { margin-top: 10px; }
+
+        .footer-note {
+            text-align: center;
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">期間限定：蒼天クリエイティブ・パートナーズ特別企画</div>
+
+<div class="container">
+    <div class="main-card">
+        <div class="card-content">
+            <div class="top-badge">公式LINE登録者限定</div>
+            <h1><span>完全無料</span>で<br>限定特典を受け取る</h1>
+            <p class="lead-text">プロのノウハウを詰め込んだ特典を<br>友だち追加だけで即配布中</p>
+
+            <div class="benefit-box">
+                <div class="benefit-item">
+                    <div class="icon-wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><path d="M5 13l4 4L19 7"/></svg></div>
+                    <p>厳選コンテンツを即座に提供</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon-wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><path d="M5 13l4 4L19 7"/></svg></div>
+                    <p>最新の業界トレンドを配信</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="icon-wrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4"><path d="M5 13l4 4L19 7"/></svg></div>
+                    <p>個別相談の優先案内</p>
+                </div>
+            </div>
+
+            <div class="limit-info">
+                <div class="pulse-dot"></div>
+                <span id="counter">残りあと12名</span>
+            </div>
+
+            <a href="javascript:void(0)" class="cta-button" id="mainBtn" onclick="trackAndRedirect()">
+                LINEで今すぐ受け取る ▶
+            </a>
+            <p class="sub-hint">追加は10秒で完了・解除も自由です</p>
+        </div>
+    </div>
+
+    <div class="info-area">
+        <details>
+            <summary>特定商取引法に基づく表記</summary>
+            <div class="details-inner">
+                <p><strong>事業主：</strong>蒼天クリエイティブ・パートナーズ</p>
+                <p><strong>代表者：</strong>佐藤 健太郎</p>
+                <p><strong>所在地：</strong>〒150-0013 東京都渋谷区恵比寿1丁目15-9 シルク恵比寿 402号室</p>
+                <p><strong>連絡先：</strong>080-9954-3459</p>
+                <p><strong>メール：</strong>mganc1245@gmail.com</p>
+                <p>※お電話での勧誘・お問い合わせは記録保持のためお控えください。メールにてご連絡をお願いいたします。</p>
+            </div>
+        </details>
+        <details>
+            <summary>プライバシーポリシー</summary>
+            <div class="details-inner">
+                <p>お預かりした個人情報は、本サービスの提供・案内およびお問い合わせ対応のみに利用し、適切に管理いたします。法令に定める場合を除き、第三者へ提供することはありません。</p>
+            </div>
+        </details>
+    </div>
+
+    <div class="footer-note">
+        &copy; Soten Creative Partners. All Rights Reserved.
+    </div>
+</div>
+
+<script>
+(function(){
+    var LINE_URL = 'https://lin.ee/VrD0caT';
+    var isFired = false;
+
+    window.trackAndRedirect = function() {
+        if(isFired) {
+            window.location.href = LINE_URL;
+            return;
+        }
+        isFired = true;
+
+        var btn = document.getElementById('mainBtn');
+        btn.textContent = 'LINE起動中...';
+        btn.style.opacity = '0.7';
+
+        // TikTok Pixel発火（ご指定の仕様通り）
+        try {
+            if(typeof ttq !== 'undefined') {
+                ttq.track('ClickButton');
+                ttq.track('CompleteRegistration');
+                ttq.track('Contact');
+            }
+        } catch(e) { console.log(e); }
+
+        // 500msのバッファを持たせて遷移
+        setTimeout(function(){
+            window.location.href = LINE_URL;
+        }, 500);
+    };
+
+    // 残り人数の演出
+    var countEl = document.getElementById('counter');
+    if(countEl) {
+        var randomNum = Math.floor(Math.random() * 10) + 5;
+        countEl.textContent = '残りあと' + randomNum + '名';
+    }
+})();
+</script>
+
+</body>
+</html>
