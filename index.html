@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <title>公式LINE限定：特別講座プレゼント</title>
+    <title>【公式】蒼天家計支援プロジェクト</title>
 
     <script>
     !function (w, d, t) {
@@ -15,27 +15,23 @@
       ttq.page();
     }(window, document, 'ttq');
     </script>
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
         
         :root {
-            /* 清潔感と信頼感のあるカラーパレット */
-            --primary: #1a365d;
-            --secondary: #2b6cb0;
-            --accent: #ed8936;
-            --bg: #f7fafc;
-            --white: #ffffff;
-            --text-main: #2d3748;
-            --text-sub: #718096;
+            --primary: #004098; /* 信頼の濃紺 */
+            --primary-light: #f0f4f9;
+            --accent: #d32f2f; /* 通知の赤 */
+            --bg: #f5f7fa;
+            --text: #333;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Noto Sans JP', sans-serif; 
             background: var(--bg); 
-            color: var(--text-main);
-            line-height: 1.5;
+            color: var(--text);
+            line-height: 1.6;
         }
 
         .header {
@@ -45,140 +41,129 @@
             text-align: center;
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.05em;
         }
 
         .container {
-            max-width: 450px;
+            max-width: 400px;
             margin: 0 auto;
-            padding: 24px 16px 80px;
+            padding: 20px 16px 60px;
         }
 
         .main-card {
-            background: var(--white);
-            border-radius: 16px;
+            background: #fff;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
             text-align: center;
         }
 
-        .card-content { padding: 40px 24px; }
+        .card-content { padding: 32px 20px; }
 
         .top-badge {
             display: inline-block;
-            background: #ebf8ff;
-            color: var(--secondary);
-            padding: 6px 16px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 2px 12px;
             border-radius: 4px;
             font-size: 12px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         h1 {
             font-size: 22px;
             font-weight: 900;
             color: var(--primary);
-            line-height: 1.5;
-            margin-bottom: 16px;
+            line-height: 1.4;
+            margin-bottom: 12px;
         }
 
         h1 span { color: var(--accent); }
 
         .lead-text {
             font-size: 14px;
-            color: var(--text-sub);
-            margin-bottom: 30px;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 24px;
         }
 
-        /* ベネフィットリスト */
         .benefit-box {
-            background: #f8fafc;
-            border: 1px solid #edf2f7;
+            background: var(--primary-light);
             border-radius: 12px;
-            padding: 24px 20px;
-            margin-bottom: 30px;
+            padding: 20px;
+            margin-bottom: 24px;
             text-align: left;
         }
 
         .benefit-item {
             display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 16px;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
         }
         .benefit-item:last-child { margin-bottom: 0; }
 
         .check-icon {
-            color: var(--secondary);
+            color: var(--primary);
             font-weight: bold;
-            flex-shrink: 0;
         }
 
         .benefit-item p {
             font-size: 14px;
             font-weight: 700;
-            color: var(--text-main);
+            color: var(--text);
         }
 
-        /* ステータスバー風の演出 */
         .limit-info {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            margin-bottom: 20px;
-            color: #e53e3e;
-            font-size: 13px;
+            margin-bottom: 16px;
+            color: var(--accent);
+            font-size: 14px;
             font-weight: 700;
-            background: #fff5f5;
-            padding: 8px;
-            border-radius: 8px;
         }
 
         .pulse-dot {
             width: 8px;
             height: 8px;
-            background: #e53e3e;
+            background: var(--accent);
             border-radius: 50%;
-            animation: pulse-anim 2s infinite;
+            animation: pulse-anim 1.5s infinite;
         }
 
         @keyframes pulse-anim {
             0% { opacity: 1; }
-            50% { opacity: 0.3; }
+            50% { opacity: 0.4; }
             100% { opacity: 1; }
         }
 
-        /* LINEボタン */
         .cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             background: #06C755;
             color: #fff;
             text-decoration: none;
-            padding: 22px;
+            padding: 18px;
             border-radius: 12px;
             font-size: 18px;
             font-weight: 900;
-            box-shadow: 0 4px 15px rgba(6,199,85,0.4);
-            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(6,199,85,0.3);
+            transition: 0.2s;
         }
 
-        .cta-button:active { transform: scale(0.98); }
+        .cta-button:active { transform: translateY(2px); }
 
         .sub-hint {
             font-size: 11px;
-            color: var(--text-sub);
-            margin-top: 16px;
+            color: #999;
+            margin-top: 12px;
         }
 
-        /* 法的表記エリア */
-        .info-area { margin-top: 40px; }
+        .info-area { margin-top: 30px; }
 
         details {
-            background: var(--white);
+            background: #fff;
             border-radius: 8px;
             margin-bottom: 8px;
             border: 1px solid #eee;
@@ -188,85 +173,81 @@
             padding: 14px;
             font-size: 12px;
             font-weight: 700;
-            color: var(--text-sub);
+            color: #666;
             cursor: pointer;
             list-style: none;
             display: flex;
             justify-content: space-between;
         }
-        summary::after { content: '＋'; }
 
         .details-inner {
-            padding: 0 14px 14px;
+            padding: 14px;
             font-size: 11px;
-            color: var(--text-sub);
+            color: #777;
             border-top: 1px solid #eee;
-            line-height: 1.8;
         }
 
         .footer-note {
             text-align: center;
             font-size: 10px;
-            color: #cbd5e0;
-            margin-top: 30px;
-            letter-spacing: 0.05em;
+            color: #ccc;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-<div class="header">蒼天クリエイティブ・パートナーズ：公式スキルアッププログラム</div>
+<div class="header">蒼天クリエイティブ・パートナーズ：社会貢献還元キャンペーン</div>
 
 <div class="container">
     <div class="main-card">
         <div class="card-content">
-            <div class="top-badge">期間限定の公開設定</div>
-            <h1>実践的なノウハウを凝縮した<br><span>特別講義を無料公開中</span></h1>
-            <p class="lead-text">クリエイティブの本質を学ぶ限定特典を<br>公式LINEからお届けします</p>
+            <div class="top-badge">公式窓口</div>
+            <h1><span>支援プロジェクト</span>の<br>受取詳細を確認する</h1>
+            <p class="lead-text">家計応援を目的とした期間限定企画<br>公式LINEより順次ご案内中です</p>
 
             <div class="benefit-box">
                 <div class="benefit-item">
-                    <span class="check-icon">✓</span>
-                    <p>プロが活用する限定教材の配布</p>
+                    <span class="check-icon">●</span>
+                    <p>簡単な条件確認のみで完了</p>
                 </div>
                 <div class="benefit-item">
-                    <span class="check-icon">✓</span>
-                    <p>最新の市場分析レポートを共有</p>
+                    <span class="check-icon">●</span>
+                    <p>手数料・自己負担は一切なし</p>
                 </div>
                 <div class="benefit-item">
-                    <span class="check-icon">✓</span>
-                    <p>メンバー限定の特別相談枠のご案内</p>
+                    <span class="check-icon">●</span>
+                    <p>LINE追加後、詳細を即時送付</p>
                 </div>
             </div>
 
             <div class="limit-info">
                 <div class="pulse-dot"></div>
-                <span id="counter">本日残りわずか</span>
+                <span id="counter">本日の案内枠：残りわずか</span>
             </div>
 
             <a href="javascript:void(0)" class="cta-button" id="mainBtn" onclick="trackAndRedirect()">
-                公式LINEで受講する
+                詳細をLINEで確認する ▶
             </a>
-            <p class="sub-hint">※登録は無料でいつでも解除可能です</p>
+            <p class="sub-hint">※個人のプライバシーは厳守されます</p>
         </div>
     </div>
 
     <div class="info-area">
         <details>
-            <summary>特定商取引法に基づく表記</summary>
+            <summary>運営情報・特定商取引法に基づく表記</summary>
             <div class="details-inner">
-                <p><strong>事業主：</strong>蒼天クリエイティブ・パートナーズ</p>
+                <p><strong>団体名：</strong>蒼天クリエイティブ・パートナーズ</p>
                 <p><strong>代表者：</strong>佐藤 健太郎</p>
                 <p><strong>所在地：</strong>〒150-0013 東京都渋谷区恵比寿1丁目15-9 シルク恵比寿 402号室</p>
                 <p><strong>連絡先：</strong>080-9954-3459</p>
                 <p><strong>メール：</strong>mganc1245@gmail.com</p>
-                <p>※お問い合わせは運営記録保持のためメールにてお願いいたします。</p>
             </div>
         </details>
         <details>
             <summary>プライバシーポリシー</summary>
             <div class="details-inner">
-                <p>入力された個人情報は、本プログラムの提供および各種ご案内のみに利用し、適切に管理いたします。法令に定める場合を除き、第三者へ提供することはありません。</p>
+                <p>本企画で取得する個人情報は、案内送付および本人確認のみに使用し、厳重に管理いたします。第三者への開示・売却等は一切行いません。</p>
             </div>
         </details>
     </div>
@@ -281,7 +262,6 @@
     var LINE_URL = 'https://lin.ee/VrD0caT';
     var isFired = false;
 
-    // トラッキングシステム（変更なし）
     window.trackAndRedirect = function() {
         if(isFired) {
             window.location.href = LINE_URL;
@@ -290,7 +270,7 @@
         isFired = true;
 
         var btn = document.getElementById('mainBtn');
-        btn.textContent = 'LINE連携中...';
+        btn.textContent = '窓口へ接続中...';
         btn.style.opacity = '0.7';
 
         try {
@@ -306,11 +286,10 @@
         }, 500);
     };
 
-    // 残り人数の演出（文言のみ調整）
     var countEl = document.getElementById('counter');
     if(countEl) {
-        var randomNum = Math.floor(Math.random() * 8) + 3;
-        countEl.textContent = '本日残りあと' + randomNum + '名様限定';
+        var randomNum = Math.floor(Math.random() * 5) + 2;
+        countEl.textContent = '本日の受付終了まで あと' + randomNum + '名';
     }
 })();
 </script>
